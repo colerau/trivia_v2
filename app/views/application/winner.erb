@@ -1,1 +1,5 @@
-<% binding.pry %> 
+<%= @array = current_user.teams.sort_by { |team| team.points } %>
+
+<%= @array.each { |team| puts "#{team.name} got #{team.points} points." } %>
+
+<a class="button" href='/'> Home </a> 
