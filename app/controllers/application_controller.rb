@@ -59,25 +59,40 @@ class ApplicationController < Sinatra::Base
             (params[:t10r1q1].to_i) + (params[:t10r1q2].to_i) + (params[:t10r1q3].to_i) + (params[:t10r1q4].to_i) + (params[:t10r2q1].to_i) + (params[:t10r2q2].to_i) + (params[:t10r2q3].to_i) + (params[:t10r2q4].to_i) + (params[:t10r3q1].to_i) + (params[:t10r3q2].to_i) + (params[:t10r3q3].to_i) + (params[:t10r3q4].to_i) + (params[:t10r4q1].to_i) + (params[:t10r4q2].to_i) + (params[:t10r4q3].to_i) + (params[:t10r4q4].to_i)
             )
 
-        current_user.teams[0].points = @team1score
+        @team1 = current_user.teams[0]
+        @team1.points = @team1score
+        @team1.save
 
-        current_user.teams[1].points = @team2score
+        @team2 = current_user.teams[1]@team2.points = @team2score
+        @team2.save
 
-        current_user.teams[2].points = @team3score
+        @team3 = current_user.teams[2]
+        @team3.points = @team3score
+        @team3.save
 
-        current_user.teams[3].points = @team4score
+        @team4 = current_user.teams[3]@team4.points = @team4score
+        @team4.save
 
-        current_user.teams[4].points = @team5score
+        @team5 = current_user.teams[4]
+        @team5.points = @team5score
+        @team5.save
 
-        current_user.teams[5].points = @team6score
+        @team6 = current_user.teams[5]@team6.points = @team6score
+        @team6.save
 
-        current_user.teams[6].points = @team7score
+        @team7 = current_user.teams[6]
+        @team7.points = @team7score
+        @team7.save
 
-        current_user.teams[7].points = @team8score
+        @team8 = current_user.teams[7]@team8.points = @team8score
+        @team8.save
 
-        current_user.teams[8].points = @team9score
+        @team9 = current_user.teams[8]
+        @team9.points = @team9score
+        @team9.save
 
-        current_user.teams[9].points = @team10score
+        @team10 = current_user.teams[9]@team10.points = @team10score
+        @team10.save
 
         binding.pry
         erb :"/application/winner"
