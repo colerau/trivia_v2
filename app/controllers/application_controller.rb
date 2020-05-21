@@ -95,7 +95,6 @@ class ApplicationController < Sinatra::Base
         @team10.points = @team10score;
         @team10.save;
 
-        binding.pry
         erb :"/application/winner"
     end 
 

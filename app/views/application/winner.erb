@@ -1,5 +1,9 @@
-<%= @array = current_user.teams.sort_by { |team| team.points } %>
+<% @array = current_user.teams.sort_by { |team| team.points } %>
 
-<%= @array.each { |team| puts "#{team.name} got #{team.points} points." } %>
+<h1> Final Score </h1> 
+<% @array.each do |team| %> 
+    <b><%="#{team.name}"%></b> got <b><%="#{team.points}"%></b> points.<br>
+<% end %> 
 
-<a class="button" href='/'> Home </a> 
+<br> <br> <br> <br> 
+<a class="button" href='/'> Back to Home </a> 
