@@ -13,6 +13,7 @@ class TeamsController < ApplicationController
         # t1 stands for team one
         if !(Team.find_by(name: params[:t1n]))
             @t1 = Team.create(name: params[:t1n])
+            binding.pry
         else 
             redirect '/teams/new'
         end 

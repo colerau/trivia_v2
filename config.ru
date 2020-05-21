@@ -10,4 +10,5 @@ end
 use Rack::MethodOverride
 
 use TeamsController
+use SessionsController
 run ApplicationController
