@@ -1,2 +1,2 @@
 # trivia_v2
-trivia version 2
+Trivia Scoring Web App
